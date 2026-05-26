@@ -10,6 +10,7 @@ import { DataRow } from "./components/DataRow";
 import { PrivacyScore } from "./components/PrivacyScore";
 import { ShareCard } from "./components/ShareCard";
 import { AdBanner } from "./components/AdBanner";
+import { EducationSection } from "./components/EducationSection";
 
 function computePrivacyScore(fingerprint, ipData) {
   let score = 100;
@@ -64,7 +65,7 @@ export default function App() {
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <img src="/logo.png" alt="Digital Shadow Logo" className="w-8 h-8 object-contain rounded-full" />
-                <div className="font-bold text-lg md:text-xl">◉ DIGITAL SHADOW</div>
+                <h1 className="font-bold text-lg md:text-xl m-0">◉ DIGITAL SHADOW</h1>
               </div>
               <div className="flex items-center gap-4">
                 <div className="text-cyan-400 text-sm hidden md:block">
@@ -285,6 +286,9 @@ export default function App() {
               </div>
             </div>
           </main>
+
+          {/* Education Section */}
+          <EducationSection />
 
           {/* Bottom Ad */}
           <div className="max-w-6xl mx-auto px-4 pb-12">
