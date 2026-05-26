@@ -73,15 +73,23 @@ export function AdBanner({ slot, position = "sidebar" }) {
   }
 
   return (
-    <div style={{ minHeight, minWidth: position === "sidebar" ? "300px" : "100%", width: "100%" }}>
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-        data-ad-client="ca-pub-5224273312267357"
-        data-ad-slot={slot || "XXXXXXXXXX"}
-      />
+    <div className="w-full relative flex flex-col items-center my-2">
+      <div className="text-[10px] text-green-700/50 uppercase tracking-widest mb-1 w-full text-center">
+        - Advertisement -
+      </div>
+      <div 
+        className="bg-green-950/10 rounded-lg p-2 border border-green-900/20 w-full overflow-hidden flex justify-center" 
+        style={{ minHeight, minWidth: position === "sidebar" ? "300px" : "100%" }}
+      >
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block", width: "100%" }}
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+          data-ad-client="ca-pub-5224273312267357"
+          data-ad-slot={slot || "9763007230"}
+        />
+      </div>
     </div>
   );
 }
