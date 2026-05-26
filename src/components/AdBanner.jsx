@@ -22,7 +22,7 @@ export function AdBanner({ slot, position = "sidebar" }) {
           script.async = true;
           script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
           script.setAttribute("crossorigin", "anonymous");
-          script.setAttribute("data-ad-client", "ca-pub-XXXXXXXXXXXXXXXX");
+          script.setAttribute("data-ad-client", "ca-pub-5224273312267357");
           document.head.appendChild(script);
         }
 
@@ -79,7 +79,7 @@ export function AdBanner({ slot, position = "sidebar" }) {
         style={{ display: "block" }}
         data-ad-format="auto"
         data-full-width-responsive="true"
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-client="ca-pub-5224273312267357"
         data-ad-slot={slot || "XXXXXXXXXX"}
       />
     </div>

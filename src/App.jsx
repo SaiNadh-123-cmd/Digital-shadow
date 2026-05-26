@@ -62,7 +62,10 @@ export default function App() {
           {/* Header */}
           <header className="bg-black/90 border-b border-green-900/40 sticky top-0 z-50 backdrop-blur-sm">
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-              <div className="font-bold text-lg md:text-xl">◉ DIGITAL SHADOW</div>
+              <div className="flex items-center gap-3">
+                <img src="/logo.png" alt="Digital Shadow Logo" className="w-8 h-8 object-contain rounded-full" />
+                <div className="font-bold text-lg md:text-xl">◉ DIGITAL SHADOW</div>
+              </div>
               <div className="flex items-center gap-4">
                 <div className="text-cyan-400 text-sm hidden md:block">
                   {ipLoading ? "..." : ipData?.ip}
