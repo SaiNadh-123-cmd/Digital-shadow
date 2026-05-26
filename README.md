@@ -1,5 +1,4 @@
-Here’s a high-impact, professional README.md designed specifically for your Digital Shadow Analyzer. It mirrors the "hacker terminal" aesthetic of your project while maintaining the technical clarity needed for a GitHub repository.
-------------------------------
+
 ## 🕵️‍♂️ Digital Shadow Analyzer
 
 "What does the web know about you when you're just looking?"
