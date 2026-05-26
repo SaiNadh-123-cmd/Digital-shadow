@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function AdBanner({ slot, position = "sidebar" }) {
+export function AdBanner({ slot, position = "sidebar", layoutKey = null, format = "auto" }) {
   const [adBlocked, setAdBlocked] = useState(false);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export function AdBanner({ slot, position = "sidebar" }) {
 
   if (adBlocked) {
     return (
-      <div className="bg-green-950/20 border border-green-900/40 rounded-lg p-4 font-mono w-full" style={{ minHeight }}>
+      <div className={`bg-green-950/20 border border-green-900/40 rounded-lg p-4 font-mono w-full ${position === 'feed' ? 'my-4' : ''}`} style={position === 'feed' ? {} : { minHeight }}>
         <div className="text-yellow-400 text-xs font-bold mb-2">
           [RECOMMENDATION] Your scan revealed you have no VPN. Protect yourself:
         </div>
@@ -73,18 +73,19 @@ export function AdBanner({ slot, position = "sidebar" }) {
   }
 
   return (
-    <div className="w-full relative flex flex-col items-center my-2">
+    <div className={`w-full relative flex flex-col items-center ${position === 'feed' ? 'my-6' : 'my-2'}`}>
       <div className="text-[10px] text-green-700/50 uppercase tracking-widest mb-1 w-full text-center">
         - Advertisement -
       </div>
       <div 
         className="bg-green-950/10 rounded-lg p-2 border border-green-900/20 w-full overflow-hidden flex justify-center" 
-        style={{ minHeight, minWidth: position === "sidebar" ? "300px" : "100%" }}
+        style={position === 'feed' ? {} : { minHeight, minWidth: position === "sidebar" ? "300px" : "100%" }}
       >
         <ins
           className="adsbygoogle"
           style={{ display: "block", width: "100%" }}
-          data-ad-format="auto"
+          data-ad-format={format}
+          {...(layoutKey ? { "data-ad-layout-key": layoutKey } : {})}
           data-full-width-responsive="true"
           data-ad-client="ca-pub-5224273312267357"
           data-ad-slot={slot || "9763007230"}

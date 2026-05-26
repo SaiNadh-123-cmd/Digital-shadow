@@ -130,6 +130,8 @@ export default function App() {
                       <DataRow label="Timezone" value={fingerprint?.timezone} severity="info" delayIndex={5} />
                       <DataRow label="Currency" value={ipData ? `${ipData.currency} (${ipData.currency_name})` : null} severity="info" delayIndex={6} />
                       
+                      <AdBanner slot="9545869440" layoutKey="-fb+5w+4e-db+86" format="fluid" position="feed" />
+                      
                       <div className="my-4 border-t border-green-900/50"></div>
                       
                       <div className="text-green-500 font-bold mb-2"> {">"} BROWSER</div>
@@ -148,6 +150,8 @@ export default function App() {
                       <DataRow label="Color Depth" value={fingerprint?.screen ? `${fingerprint.screen.colorDepth}-bit` : null} severity="info" delayIndex={2} />
                       <DataRow label="Pixel Ratio" value={fingerprint?.screen?.devicePixelRatio} severity="info" delayIndex={3} />
                       <DataRow label="Window Inner" value={fingerprint?.windowSize?.inner} severity="info" delayIndex={4} />
+                      
+                      <AdBanner slot="9545869440" layoutKey="-fb+5w+4e-db+86" format="fluid" position="feed" />
                       
                       <div className="my-4 border-t border-green-900/50"></div>
                       
@@ -185,6 +189,8 @@ export default function App() {
                       <DataRow label="UTC Offset" value={ipData?.utc_offset} severity="info" delayIndex={7} />
                       <DataRow label="Calling Code" value={ipData?.calling_code} severity="info" delayIndex={8} />
 
+                      <AdBanner slot="9545869440" layoutKey="-fb+5w+4e-db+86" format="fluid" position="feed" />
+
                       {ipData && (
                         <div className="mt-6">
                           <div className="bg-green-950/20 border border-green-900/30 rounded-lg h-48 flex items-center justify-center">
@@ -214,6 +220,9 @@ export default function App() {
                       <DataRow label="WebGL Renderer" value={fingerprint?.webgl?.renderer} severity="danger" delayIndex={1} />
                       <DataRow label="GPU Vendor" value={fingerprint?.webgl?.vendor} severity="warn" delayIndex={2} />
                       <DataRow label="WebGL Hash" value={fingerprint?.webgl?.hash} severity="danger" delayIndex={3} />
+                      
+                      <AdBanner slot="9545869440" layoutKey="-fb+5w+4e-db+86" format="fluid" position="feed" />
+                      
                       <DataRow label="User Agent" value={fingerprint?.userAgent ? fingerprint.userAgent.slice(0, 80) + "..." : null} severity="warn" delayIndex={4} />
                       <DataRow label="Browser Vendor" value={fingerprint?.vendor} severity="info" delayIndex={5} />
                       <DataRow label="All Languages" value={fingerprint?.language?.all} severity="warn" delayIndex={6} />
